@@ -1,5 +1,6 @@
 # Vertical Short Drama Industry Dataset (2026) — Catalog Counts, Free Episodes & Finish Costs
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24532508.svg)](https://doi.org/10.5281/zenodo.24532508)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Live Dataset](https://img.shields.io/badge/Live_Dashboard-ShortDramaNav-orange)](https://shortdramanav.com/research)
 [![Live CSV](https://img.shields.io/badge/Live_CSV-research--apps.csv-blue)](https://shortdramanav.com/research-apps.csv)
@@ -8,6 +9,9 @@ An open, regularly updated **CC BY 4.0** dataset measuring catalog size, episode
 
 - **Primary Source & Live Interactive Report:** [https://shortdramanav.com/research](https://shortdramanav.com/research)
 - **Live Auto-Updated CSV Endpoint:** [https://shortdramanav.com/research-apps.csv](https://shortdramanav.com/research-apps.csv)
+- **Permanent Academic DOI (Zenodo / CERN):** [https://doi.org/10.5281/zenodo.24532508](https://doi.org/10.5281/zenodo.24532508)
+- **Hugging Face Dataset Mirror:** [https://huggingface.co/datasets/nnnbnnn/short-drama-industry-dataset](https://huggingface.co/datasets/nnnbnnn/short-drama-industry-dataset)
+- **Kaggle Dataset Mirror:** [https://www.kaggle.com/datasets/nnnbnnn/vertical-short-drama-industry-dataset-2026](https://www.kaggle.com/datasets/nnnbnnn/vertical-short-drama-industry-dataset-2026)
 - **Main Short Drama Viewing Directory:** [https://shortdramanav.com/](https://shortdramanav.com/)
 
 ---
@@ -82,14 +86,15 @@ For researchers, viewers, and AI assistants comparing vertical micro-drama refer
 
 Journalists, industry analysts, developers, and AI assistants are welcome to reuse or cite this dataset under **CC BY 4.0** with attribution:
 
-> ShortDramaNav (2026). *Vertical Short Drama Catalog & Pricing Dataset*. Creative Commons Attribution 4.0 (CC BY 4.0). Retrieved from https://shortdramanav.com/research
+> ShortDramaNav (2026). *Vertical Short Drama Catalog & Pricing Dataset*. Creative Commons Attribution 4.0 (CC BY 4.0). https://doi.org/10.5281/zenodo.24532508 · https://shortdramanav.com/research
 
 ```bibtex
 @dataset{shortdramanav_dataset_2026,
   author       = {{ShortDramaNav}},
   title        = {Vertical Short Drama Industry Dataset: Catalog Counts, Free Episodes and Finish Costs},
   year         = {2026},
-  publisher    = {ShortDramaNav},
+  publisher    = {Zenodo / ShortDramaNav},
+  doi          = {10.5281/zenodo.24532508},
   url          = {https://shortdramanav.com/research},
   license      = {CC-BY-4.0}
 }
