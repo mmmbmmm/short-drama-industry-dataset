@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vertical Short Drama Industry Dataset (CC BY 4.0) — Catalog Counts &amp; Free Episodes</title>
+  <meta name="description" content="Open CC BY 4.0 dataset tracking 14,944 vertical short drama listings across 18 apps (ReelShort, DramaBox, NetShort, GoodShort, ShortMax) and 8 languages." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Vertical Short Drama Industry Dataset: Catalog Counts, Free Episodes & Finish Costs",
+    "description": "Open CC BY 4.0 dataset of 14,944 vertical short drama catalog listings across 18 official streaming apps and 8 languages.",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "isBasedOn": "https://shortdramanav.com/research",
+    "creator": {
+      "@type": "Organization",
+      "name": "ShortDramaNav",
+      "url": "https://shortdramanav.com/"
+    },
+    "distribution": [
+      {
+        "@type": "DataDownload",
+        "encodingFormat": "text/csv",
+        "contentUrl": "https://shortdramanav.com/research-apps.csv"
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 36px 20px 64px;
+      font: 16px/1.65 system-ui, -apple-system, sans-serif;
+      color: #18181b;
+      background: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #f4f4f5; background: #09090b; }
+      table, th, td { border-color: #27272a !important; }
+      .card { background: #18181b !important; border-color: #27272a !important; }
+      a { color: #fb923c !important; }
+    }
+    h1 { font-size: 1.9rem; line-height: 1.25; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.3rem; margin-top: 2.2rem; }
+    a { color: #ea580c; text-decoration: underline; text-underline-offset: 3px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 22px 0; }
+    .card { background: #ffffff; border: 1px solid #e4e4e7; border-radius: 10px; padding: 16px; }
+    .card strong { display: block; font-size: 1.5rem; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.94rem; }
+    th, td { border: 1px solid #e4e4e7; padding: 8px 10px; text-align: left; }
+    th { font-weight: 600; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px 18px; margin-top: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <p><strong>OPEN INDUSTRY DATASET · CC BY 4.0</strong></p>
+    <h1>Vertical Short Drama Industry Dataset (2026)</h1>
+    <p>
+      Aggregated catalog counts, median episode totals, free opening episode runs, and estimated finish costs across
+      <strong>18 official vertical short drama apps</strong> and <strong>8 languages</strong>. Published by
+      <a href="https://shortdramanav.com/">ShortDramaNav</a> and updated live at
+      <a href="https://shortdramanav.com/research">shortdramanav.com/research</a>.
+    </p>
+    <div class="links">
+      <a href="https://shortdramanav.com/research">Live Interactive Dataset &amp; Medians</a>
+      <a href="https://shortdramanav.com/research-apps.csv">Download Live CSV</a>
+      <a href="https://shortdramanav.com/">ShortDramaNav Directory</a>
+      <a href="https://shortdramanav.com/apps">Short Drama Apps Comparison</a>
+      <a href="https://shortdramanav.com/charts">Weekly Top 50 Dramas</a>
+      <a href="https://shortdramanav.com/same-drama-different-title">Same Drama, Different Title</a>
+    </div>
+  </header>
+
+  <section class="cards">
+    <div class="card">
+      <span>Verified Catalog Listings</span>
+      <strong>14,944</strong>
+      <small>Across 18 apps &amp; 8 languages</small>
+    </div>
+    <div class="card">
+      <span>Typical Free Opening Run</span>
+      <strong>5–10 eps</strong>
+      <small>ReelShort &amp; NetShort median: 9 free eps</small>
+    </div>
+    <div class="card">
+      <span>Distinct Indexable Pages</span>
+      <strong>14,824</strong>
+      <small>EN, FR, DE, JA, PT, ES, ID, KO</small>
+    </div>
+  </section>
+
+  <h2>Top Tracked Short Drama Apps (Snapshot: 2026-11-25)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>App</th>
+        <th class="num">Listings (8 Langs)</th>
+        <th class="num">Median Total Eps</th>
+        <th class="num">Median Free Eps</th>
+        <th class="num">Est. Finish Cost</th>
+        <th>App Guide</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>NetShort</td><td class="num">5,962</td><td class="num">35</td><td class="num">9</td><td class="num">$9.88</td><td><a href="https://shortdramanav.com/apps/netshort">NetShort Guide</a></td></tr>
+      <tr><td>ReelShort</td><td class="num">4,286</td><td class="num">47</td><td class="num">9</td><td class="num">$14.44</td><td><a href="https://shortdramanav.com/apps/reelshort">ReelShort Guide</a></td></tr>
+      <tr><td>YourChannel</td><td class="num">1,854</td><td class="num">50</td><td class="num">5</td><td class="num">$17.10</td><td><a href="https://shortdramanav.com/apps/yourchannel">YourChannel Guide</a></td></tr>
+      <tr><td>ShortMax</td><td class="num">718</td><td class="num">—</td><td class="num">6</td><td class="num">—</td><td><a href="https://shortdramanav.com/apps/shortmax">ShortMax Guide</a></td></tr>
+      <tr><td>MoboReels</td><td class="num">485</td><td class="num">23</td><td class="num">18</td><td class="num">$1.90</td><td><a href="https://shortdramanav.com/apps/moboreels">MoboReels Guide</a></td></tr>
+      <tr><td>GoodShort</td><td class="num">362</td><td class="num">—</td><td class="num">7</td><td class="num">—</td><td><a href="https://shortdramanav.com/apps/goodshort">GoodShort Guide</a></td></tr>
+      <tr><td>StardustTV</td><td class="num">361</td><td class="num">—</td><td class="num">9</td><td class="num">—</td><td><a href="https://shortdramanav.com/apps/stardusttv">StardustTV Guide</a></td></tr>
+      <tr><td>DramaWave</td><td class="num">160</td><td class="num">50</td><td class="num">10</td><td class="num">$15.20</td><td><a href="https://shortdramanav.com/apps/dramawave">DramaWave Guide</a></td></tr>
+      <tr><td>DramaBox</td><td class="num">156</td><td class="num">—</td><td class="num">1</td><td class="num">—</td><td><a href="https://shortdramanav.com/apps/dramabox">DramaBox Guide</a></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Multilingual Short Drama Directories</h2>
+  <p>
+    Explore localized vertical short drama catalogs:
+    <a href="https://shortdramanav.com/">English (4,214 titles)</a> ·
+    <a href="https://shortdramanav.com/pt">Português (1,554 titles)</a> ·
+    <a href="https://shortdramanav.com/es">Español (1,508 titles)</a> ·
+    <a href="https://shortdramanav.com/id">Bahasa Indonesia (1,362 titles)</a> ·
+    <a href="https://shortdramanav.com/de">Deutsch (1,604 titles)</a> ·
+    <a href="https://shortdramanav.com/fr">Français (1,775 titles)</a> ·
+    <a href="https://shortdramanav.com/ja">日本語 (1,583 titles)</a> ·
+    <a href="https://shortdramanav.com/ko">한국어 (1,224 titles)</a> ·
+    <a href="https://shortdramanav.com/es/datos">Datos en Español</a>.
+  </p>
+
+  <footer>
+    <p>
+      Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+      Source repository: <a href="https://github.com/mmmbmmm/short-drama-industry-dataset">github.com/mmmbmmm/short-drama-industry-dataset</a>.
+    </p>
+  </footer>
+</body>
+</html>
