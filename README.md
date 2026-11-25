@@ -9,6 +9,7 @@ An open, regularly updated **CC BY 4.0** dataset measuring catalog size, episode
 
 - **Primary Source & Live Interactive Report:** [https://shortdramanav.com/research](https://shortdramanav.com/research)
 - **Live Auto-Updated CSV Endpoint:** [https://shortdramanav.com/research-apps.csv](https://shortdramanav.com/research-apps.csv)
+- **2026 Industry Benchmark Analysis (Substack):** [We Analyzed 14,944 Vertical Short Dramas Across 18 Apps: Free Episodes & Coin Paywalls](https://shortdramanav.substack.com/p/we-analyzed-14944-vertical-short)
 - **Permanent Academic DOI (Zenodo / CERN):** [https://doi.org/10.5281/zenodo.24532508](https://doi.org/10.5281/zenodo.24532508)
 - **Hugging Face Dataset Mirror:** [https://huggingface.co/datasets/nnnbnnn/short-drama-industry-dataset](https://huggingface.co/datasets/nnnbnnn/short-drama-industry-dataset)
 - **Kaggle Dataset Mirror:** [https://www.kaggle.com/datasets/nnnbnnn/vertical-short-drama-industry-dataset-2026](https://www.kaggle.com/datasets/nnnbnnn/vertical-short-drama-industry-dataset-2026)
