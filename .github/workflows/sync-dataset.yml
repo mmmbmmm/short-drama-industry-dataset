@@ -1,0 +1,105 @@
+name: Sync Live Short Drama Dataset
+
+on:
+  schedule:
+    # 每周一与周四 UTC 03:00（北京时间 11:00）自动同步线上最新行业数据集
+    - cron: '0 3 * * 1,4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch live CSV and 8-language sitemap counts
+        run: |
+          node <<'EOF'
+          const fs = require('node:fs');
+
+          const ORIGIN = 'https://shortdramanav.com';
+          const LANGUAGES = [
+            ['en', 'English', 'https://shortdramanav.com/'],
+            ['fr', 'French', 'https://shortdramanav.com/fr'],
+            ['de', 'German', 'https://shortdramanav.com/de'],
+            ['ja', 'Japanese', 'https://shortdramanav.com/ja'],
+            ['pt', 'Portuguese', 'https://shortdramanav.com/pt'],
+            ['es', 'Spanish', 'https://shortdramanav.com/es'],
+            ['id', 'Indonesian', 'https://shortdramanav.com/id'],
+            ['ko', 'Korean', 'https://shortdramanav.com/ko'],
+          ];
+
+          async function fetchText(url) {
+            const res = await fetch(url, {
+              headers: { 'User-Agent': 'ShortDramaNav-DatasetSync/1.0' },
+              signal: AbortSignal.timeout(20_000),
+            });
+            if (!res.ok) {
+              throw new Error(`HTTP ${res.status} for ${url}`);
+            }
+            return await res.text();
+          }
+
+          (async () => {
+            const today = new Date().toISOString().slice(0, 10);
+
+            const appsCsv = (await fetchText(`${ORIGIN}/research-apps.csv`)).trim();
+            if (!appsCsv.startsWith('app_slug,')) {
+              throw new Error('Unexpected CSV header from /research-apps.csv');
+            }
+            fs.writeFileSync('data/short-drama-apps.csv', appsCsv + '\n', 'utf8');
+
+            const langRows = [];
+            for (const [code, name, dirUrl] of LANGUAGES) {
+              const xml = await fetchText(`${ORIGIN}/sitemaps/catalog/${code}-1.xml`);
+              const count = (xml.match(/<url>/g) || []).length;
+              langRows.push({ code, name, count, dirUrl });
+            }
+            langRows.sort((a, b) => b.count - a.count);
+
+            const langCsv = [
+              'language_code,language_name,indexable_distinct_titles,directory_url,snapshot_date',
+              ...langRows.map(
+                (r) => `${r.code},${r.name},${r.count},${r.dirUrl},${today}`
+              ),
+            ].join('\n');
+            fs.writeFileSync('data/short-drama-languages.csv', langCsv + '\n', 'utf8');
+
+            const readme = fs
+              .readFileSync('README.md', 'utf8')
+              .replace(/\(Snapshot: `\d{4}-\d{2}-\d{2}`\)/g, `(Snapshot: \`${today}\`)`)
+              .replace(
+                /## App-Level Summary Table \(`\d{4}-\d{2}-\d{2}`\)/g,
+                `## App-Level Summary Table (\`${today}\`)`
+              );
+            fs.writeFileSync('README.md', readme, 'utf8');
+
+            const total = langRows.reduce((sum, r) => sum + r.count, 0);
+            console.log(`Synced ${appsCsv.split('\n').length - 1} apps, ${total} localized titles (${today}).`);
+          })().catch((err) => {
+            console.error(err);
+            process.exit(1);
+          });
+          EOF
+
+      - name: Commit and push updated snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/short-drama-apps.csv data/short-drama-languages.csv README.md
+          if git diff --cached --quiet; then
+            echo "Dataset already up to date."
+            exit 0
+          fi
+          TODAY=$(date -u +%Y-%m-%d)
+          git commit -m "chore(dataset): sync live catalog & language snapshot (${TODAY})"
+          git push
