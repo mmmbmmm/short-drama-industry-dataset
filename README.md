@@ -17,7 +17,7 @@ An open, regularly updated **CC BY 4.0** dataset measuring catalog size, episode
 
 ---
 
-## Key Industry Findings (Snapshot: `2026-11-25`)
+## Key Industry Findings (Snapshot: `2026-11-26`)
 
 Across **14,944 verified catalog entries** spanning 18 vertical micro-drama streaming apps and 8 languages (`en`, `es`, `pt`, `id`, `de`, `fr`, `ja`, `ko`):
 
@@ -36,7 +36,7 @@ Across **14,944 verified catalog entries** spanning 18 vertical micro-drama stre
 
 ---
 
-## App-Level Summary Table (`2026-11-25`)
+## App-Level Summary Table (`2026-11-26`)
 
 | App | Catalog Listings (8 Langs) | Median Total Episodes | Median Free Episodes | Free-Ep Sample (`n`) | Est. Median Finish Cost (USD) | App Guide |
 | :--- | ---: | ---: | ---: | ---: | ---: | :--- |
