@@ -9,7 +9,9 @@ An open, regularly updated **CC BY 4.0** dataset measuring catalog size, episode
 
 - **Primary Source & Live Interactive Report:** [https://shortdramanav.com/research](https://shortdramanav.com/research)
 - **Live Auto-Updated CSV Endpoint:** [https://shortdramanav.com/research-apps.csv](https://shortdramanav.com/research-apps.csv)
-- **2026 Industry Benchmark Analysis (Substack):** [We Analyzed 14,944 Vertical Short Dramas Across 18 Apps: Free Episodes & Coin Paywalls](https://shortdramanav.substack.com/p/we-analyzed-14944-vertical-short)
+- **2026 Industry Benchmark Analysis (Substack #1):** [We Analyzed 14,944 Vertical Short Dramas Across 18 Apps: Free Episodes & Coin Paywalls](https://shortdramanav.substack.com/p/we-analyzed-14944-vertical-short)
+- **Multi-Title Fragmentation Study (Substack #2):** [Same Drama, Different Title: Why One Vertical Series Has Up to 4 Official Names Across Apps (2026 Study)](https://shortdramanav.substack.com/p/same-drama-different-title-why-one)
+- **Cross-Platform Ad Hook & Licensing Analysis (Medium):** [Why the Same Vertical Short Drama Has 5 Different Titles on TikTok, ReelShort, and NetShort](https://medium.com/@nnnbnnn007/why-the-same-vertical-short-drama-has-5-different-titles-on-tiktok-reelshort-and-netshort-2b88dd100a0a)
 - **Permanent Academic DOI (Zenodo / CERN):** [https://doi.org/10.5281/zenodo.24532508](https://doi.org/10.5281/zenodo.24532508)
 - **Hugging Face Dataset Mirror:** [https://huggingface.co/datasets/nnnbnnn/short-drama-industry-dataset](https://huggingface.co/datasets/nnnbnnn/short-drama-industry-dataset)
 - **Kaggle Dataset Mirror:** [https://www.kaggle.com/datasets/nnnbnnn/vertical-short-drama-industry-dataset-2026](https://www.kaggle.com/datasets/nnnbnnn/vertical-short-drama-industry-dataset-2026)
